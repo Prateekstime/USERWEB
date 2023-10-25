@@ -1,0 +1,354 @@
+*{
+    margin: 0;
+    padding: 0%;
+    font-family: 'Poppins',sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: #000000;
+    color: #ffffff;
+}
+#header{
+    height: 150vh;
+    width: 100%;
+    background-image: url(Images/head\ image.png);  
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    size: 10vh;
+    padding-top: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo{
+    width: 300px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    
+    margin: 10px 20px;  
+}
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 30px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 5px;
+    background: #000000;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.header-text{
+    margin-top: 5%;
+    font-size: 50px;
+}
+.header-text h1{
+    margin-top: 5%;
+    font-size: 100px;
+}
+.header-text h1 span{
+    color: #4c54fc;
+}
+/*--------------About section-----------------------------*/
+#about{
+    padding: 80px 0;
+    color: #ababab;
+    margin: 5px;
+
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    width: 100%;
+    border-radius: 20px;
+}
+.about-col-2{
+    flex-basis: 60%;
+}
+.sub-title{
+    font-size: 100px;
+    font-weight: 600;
+    color: #fff;
+}
+.title-intro{
+    font-size: 25px;
+
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 40px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;   
+}
+
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 4px;
+    background: #ff0ae6;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.4s;
+}
+.tab-links.active-link::after{
+    width: 50%;
+}
+
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+    color: #e504c7;
+    font-size: 40px; 
+}
+.tab-contents{
+    display: none;
+}.tab-contents.active-tab{
+    display: block;
+}
+/*-----------------Services------------------*/
+#services{
+    padding: 30px 0;
+}
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 50px;
+    margin-top: 50px;
+    
+}
+
+.services-list div{
+    background: #26262699;
+    padding: 40px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 300;
+    border-right: 10px;
+}
+.services-list div i{
+    font-size: 80px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    transition: backgrount 0.5s,transform 0.5s;
+}
+.services-list div h2{
+    font-size: 50px;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.services-list div p{
+    font-size: 30px;
+    
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.services-list div a{
+    text-decoration: none;
+color: #3d33ff;
+font-size: 22px;
+margin-top: 20px;
+display: inline-block;
+}
+.services-list div:hover{
+    background: #ff004f;
+    transform: translate(-10px);
+
+}
+.portfolio{
+    padding: 50px 0;
+}
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 50px;
+    margin-top: 50px;
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.work-img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;    
+   
+
+}
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6),#ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 20px;
+    transition: height 0.5s;
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+
+}
+.layer a{
+    margin-top: 20px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    
+}
+.work:hover img{
+    transform: scale(1.1);
+}
+.work:hover .layer{
+    height: 100%;
+}
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #5302df;
+    font-size: 20px;
+    padding: 14px 50px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #fff;
+    transition:  0.5s;
+}
+.btn:hover{
+    background: #0c0047;
+
+}
+/*----------------------------------------conACT----*/
+.contact-left{
+    flex-basis: 35%;
+
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+    font-size: 25px;
+}
+.contact-left p i{
+    color: #ff4ad5;
+    font-size: 30px;
+
+}
+.social-icon{
+    margin-top: 30px;
+}
+.social-icon a{
+    text-decoration: none;
+    font-size: 40px;
+    margin-right: 20px;
+   
+    display: inline-block;
+    transition: transform 0.5s;
+
+}
+.social-icon a:hover{
+color: #e200b9;
+transform: translate(-5px);
+}
+.btn.btn2{
+    display: inline-block;
+
+}
+.contact-right form{
+    width: 100%;
+
+}
+form input,form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #4a4854;
+    padding: 15px;
+    margin: 15px 0;
+    color: #ffffff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+    color: #5601e8;
+    size: 40px;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #393939;
+    font-weight: 500;
+    margin-top: 20px;
+}
+/*----------------------css for small screen---------------*/
+ nav .fa-solid{
+    display: none;
+ 
+ }
+@media only screen and (max-width: 600px) {
+    #header {
+        background-image: url(Images/img1_mobile\ image.png);
+        background-position: left;
+        width: 160%;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+}
